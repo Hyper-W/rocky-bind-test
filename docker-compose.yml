@@ -1,0 +1,17 @@
+services:
+  bind-test:
+    build:
+      context: .
+    container_name: bind-test
+    ports:
+      - 8053:53
+    image: bind-test
+    hostname: bind-test
+    volumes:
+    - type: bind
+      source: /sys/fs/cgroup
+      target: /sys/fs/cgroup
+      read_only: true
+    privileged: true
+    # cap_add:
+    #   - "SYS_ADMIN"
