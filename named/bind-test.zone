@@ -1,0 +1,12 @@
+$TTL 8h
+@ IN SOA bind-test. root.bind-test. (
+                          2023062401 ; serial number
+                          1d         ; refresh period
+                          3h         ; retry period
+                          3d         ; expire time
+                          3h )       ; minimum TTL
+ 
+                  IN NS   bind-test.bind-test.
+ 
+bind-test               IN A    172.31.0.2
+googla               IN A    142.250.76.142

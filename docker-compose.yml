@@ -18,6 +18,12 @@ services:
     - type: bind
       source: ./named/named
       target: /etc/sysconfig/named
+    - type: bind
+      source: ./named/zones.conf
+      target: /etc/named/zones.conf
+    - type: bind
+      source: ./named/bind-test.zone
+      target: /etc/named/bind-test.zone
     privileged: true
     # cap_add:
     #   - "SYS_ADMIN"
