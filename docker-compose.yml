@@ -8,10 +8,10 @@ services:
     image: bind-test
     hostname: bind-test
     volumes:
-    - type: bind
-      source: /sys/fs/cgroup
-      target: /sys/fs/cgroup
-      read_only: true
+    # - type: bind
+    #   source: /sys/fs/cgroup
+    #   target: /sys/fs/cgroup
+    #   read_only: true
     - type: bind
       source: ./named/named.conf
       target: /etc/named.conf
@@ -24,6 +24,6 @@ services:
     - type: bind
       source: ./named/bind-test.zone
       target: /etc/named/bind-test.zone
-    privileged: true
+    # privileged: true
     # cap_add:
     #   - "SYS_ADMIN"
