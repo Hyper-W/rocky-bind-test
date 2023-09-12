@@ -1,7 +1,7 @@
 FROM rockylinux:8
 
 # RUN dnf install -y systemd
-RUN dnf install -y systemd bind bind-utils
+RUN dnf install -y bind bind-utils
 
 # ENTRYPOINT [ "/sbin/init" ]
 
