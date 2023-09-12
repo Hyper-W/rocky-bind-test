@@ -1,5 +1,7 @@
 FROM rockylinux:8
 
+EXPOSE 53
+
 # RUN dnf install -y systemd
 RUN dnf install -y bind bind-utils
 

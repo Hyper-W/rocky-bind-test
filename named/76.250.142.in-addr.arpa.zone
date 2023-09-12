@@ -1,0 +1,16 @@
+$ORIGIN 76.250.142.in-addr.arpa.
+; default TTL, see RFC 2308
+$TTL         3600   ;  Default TTL
+;
+; @ entry, SOA, NS are here
+;
+@             IN       SOA    bind-test. root.bind-test. (
+              2014121001      ; Serial, YYYYMMDDVV (VV: version)
+              3600            ; Refresh
+              900             ; Retry
+              3600000         ; Expire
+              3600            ; Negative cache TTL
+)
+              IN       NS     bind-test.bind-test.
+;
+142           IN       PTR    googla.bind-test.

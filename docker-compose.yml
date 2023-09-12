@@ -24,6 +24,24 @@ services:
     - type: bind
       source: ./named/bind-test.zone
       target: /etc/named/bind-test.zone
+    - type: bind
+      source: ./named/76.250.142.in-addr.arpa.conf
+      target: /etc/named/76.250.142.in-addr.arpa.conf
+    - type: bind
+      source: ./named/76.250.142.in-addr.arpa.zone
+      target: /etc/named/76.250.142.in-addr.arpa.zone
     # privileged: true
     # cap_add:
     #   - "SYS_ADMIN"
+    networks:
+      bind-test:
+        ipv4_address: 172.31.0.2
+
+networks:
+    bind-test:
+      name: bind-test
+      driver: bridge
+      ipam:
+        driver: default
+        config:
+          - subnet: 172.31.0.0/30
