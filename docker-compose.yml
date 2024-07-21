@@ -5,7 +5,7 @@ services:
     container_name: bind-test
     ports:
       - 8053:53
-    image: bind-test
+    image: ghcr.io/hyper-w/rocky-bind-test/bind-test
     hostname: bind-test
     volumes:
     # - type: bind
