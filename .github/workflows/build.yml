@@ -24,6 +24,6 @@ jobs:
                 username: ${{ github.actor }}
                 password: ${{ secrets.GITHUB_TOKEN }}
             - name: Docker Compose Build
-              run: docker compose build nfs-server
+              run: docker compose build
             - name: Docker Compose Push
-              run: docker compose push nfs-server
+              run: docker compose push
